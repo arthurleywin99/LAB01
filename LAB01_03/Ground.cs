@@ -91,7 +91,7 @@ namespace LAB01_03
         /// </summary>
         public virtual void Output()
         {
-            Console.Write($"{Location,-20}{Price,-10}{Area,-10}");
+            Console.Write($"\t{Location,-20}{Price,-10}{Area,-10}");
         }
     }
 }

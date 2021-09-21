@@ -63,7 +63,7 @@ namespace LAB01
                             }
                             else
                             {
-                                Console.WriteLine("\t\tGiá tiền trung bình 1m2: ", Price1m2(grounds));
+                                Console.WriteLine("\t\tGiá tiền trung bình 1m2: {0}", Price1m2(grounds));
                             }
                             Notification();
                             break;
@@ -107,7 +107,7 @@ namespace LAB01
         /// <param name="list"></param>
         private void InputList(List<Ground> list)
         {
-            Console.Write("\t\tNhập số lượng sinh viên: ");
+            Console.Write("\t\tNhập số lượng khu đất: ");
             int range = int.Parse(Console.ReadLine());
             for (var i = 0; i < range; ++i)
             {
@@ -124,9 +124,10 @@ namespace LAB01
         /// <param name="list"></param>
         private void OutputList(List<Ground> list)
         {
-            Console.WriteLine("\t\t{0,-20}{1,-10}{2,-10}", "Location", "Price", "Area");
+            Console.WriteLine("\t{0,-20}{1,-10}{2,-10}", "Location", "Price", "Area");
             foreach (var item in list) {
                 item.Output();
+                Console.WriteLine();
             }
         }
 

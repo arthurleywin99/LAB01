@@ -15,6 +15,7 @@ namespace LAB01
                 Console.WriteLine("* Chọn chức năng:");
                 Console.WriteLine("* 1. BÀI TẬP 1");
                 Console.WriteLine("* 2. BÀI TẬP 2");
+                Console.WriteLine("* 3. BÀI TẬP 3");
                 Console.WriteLine("* 0. THOÁT");
                 Console.WriteLine("********************************************************************************************");
 
@@ -40,6 +41,13 @@ namespace LAB01
                             Console.Clear();
                             var personList = new PersonList();
                             personList.Solve();
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.Clear();
+                            var groundList = new GroundList();
+                            groundList.Solve();
                             break;
                         }
                     default:
