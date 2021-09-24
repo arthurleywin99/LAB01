@@ -245,7 +245,6 @@ namespace LAB01
                     item.Output();
                     Console.WriteLine();
                 }
-
             }
 
             if (townHouses.Count == 0)
