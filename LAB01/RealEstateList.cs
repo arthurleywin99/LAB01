@@ -83,7 +83,7 @@ namespace LAB01
             Console.WriteLine("\t| Chọn chức năng:");
             Console.WriteLine("\t| 1. Nhập danh sách các thông tin (Khu đất, Nhà phố, Chung cư) cần quản lý");
             Console.WriteLine("\t| 2. Xuất tổng giá bán cho 3 loại (Khu đất, Nhà phố, Chung cư) của công ty");
-            Console.WriteLine("\t| 3. Xuất danh sách các khu đất có diện tích > 100m2 hoặc là nhà phố có diện tích > 60m2 và năm xây dựng > 2020 (nếu có)");
+            Console.WriteLine("\t| 3. Xuất danh sách các khu đất có diện tích > 100m2 hoặc là nhà phố có diện tích > 60m2 và năm xây dựng >= 2020 (nếu có)");
             Console.WriteLine("\t| 4. Nhập vào thông tin cần tìm kiếm (Địa điểm, giá diện tích).");
             Console.WriteLine("\t|\tXuất thông tin danh sách tất cả các nhà phố hoặc chung cư phù hợp yêu cầu.");
             Console.WriteLine("\t| 0. Trở về menu trước");
@@ -278,7 +278,7 @@ namespace LAB01
 
             List<TownHouse> townHouses = new List<TownHouse>();
             List<Apartment> apartments = new List<Apartment>();
-
+            
             foreach (var item in realEstates.Values)
             {
                 if (item.Item2.Location.Contains(location) && item.Item2.Price <= price && item.Item2.Area > area)
