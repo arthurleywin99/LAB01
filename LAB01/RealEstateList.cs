@@ -281,12 +281,12 @@ namespace LAB01
             
             foreach (var item in realEstates.Values)
             {
-                if (item.Item2.Location.Contains(location) && item.Item2.Price <= price && item.Item2.Area > area)
+                if (item.Item2.Location.ToUpper().Contains(location.ToUpper()) && item.Item2.Price <= price && item.Item2.Area > area)
                 {
                     townHouses.Add(item.Item2);
                 }
 
-                if (item.Item3.Location.Contains(location) && item.Item3.Price <= price && item.Item3.Area > area)
+                if (item.Item3.Location.ToUpper().Contains(location.ToUpper()) && item.Item3.Price <= price && item.Item3.Area > area)
                 {
                     apartments.Add(item.Item3);
                 }
