@@ -13,11 +13,18 @@ namespace LAB01
         private List<Person> people; 
 
         /// <summary>
+        /// Empty Constuctor
+        /// </summary>
+        public PersonList()
+        {
+            people = new List<Person>();
+        }
+
+        /// <summary>
         /// Phương thức xử lý chính
         /// </summary>
         public void Solve()
         {
-            people = new List<Person>();
             byte select;
             do
             {
@@ -118,11 +125,11 @@ namespace LAB01
         private void InputList(List<Person> list)
         {
             Person person = null;
-            Console.Write("\t\tNhập số lượng: ");
+            Console.Write("\t\tNhập số lượng muốn thêm: ");
             int range = int.Parse(Console.ReadLine());
             for (int i = 0; i < range; ++i)
             {
-                Console.WriteLine("\t\tNhập người thứ {0}:", i + 1);
+                Console.WriteLine($"\t\tNhập người thứ {list.Count + 1}:");
                 do
                 {
                     Console.WriteLine("\t\t\tChọn loại dữ liệu muốn nhập:");
@@ -132,17 +139,42 @@ namespace LAB01
                     byte select = byte.Parse(Console.ReadLine());
                     if (select == 1)
                     {
-                        person = new Student();
-                        person.Input();
-                        list.Add(person);
+                        do
+                        {
+                            person = new Student();
+                            person.Input();
+
+                            if (list.Any(p => p is Student && (p as Student).ID.Equals(person.ID)))
+                            {
+                                Console.WriteLine("\t\tĐã tồn tại sinh viên với mã này. Vui lòng nhập lại...");
+                            }
+                            else
+                            {
+                                list.Add(person);
+                                break;
+                            }
+                        } while (true);
                         break;
                     }
                     else if (select == 2)
                     {
-                        person = new Teacher();
-                        person.Input();
-                        list.Add(person);
+                        do
+                        {
+                            person = new Teacher();
+                            person.Input();
+
+                            if (list.Any(p => p is Teacher && (p as Teacher).ID.Equals(person.ID)))
+                            {
+                                Console.WriteLine("\t\tĐã tồn tại sinh viên với mã này. Vui lòng nhập lại...");
+                            }
+                            else
+                            {
+                                list.Add(person);
+                                break;
+                            }
+                        } while (true);
                         break;
+
                     }
                     else
                     {

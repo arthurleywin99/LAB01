@@ -20,14 +20,14 @@ namespace LAB01_01
         public string Falcuty { get; set; }
 
         /// <summary>
-        /// Empty Constructer
+        /// Empty Constructor
         /// </summary>
         public Student() : base()
         {
         }
 
         /// <summary>
-        /// Full properties Constructer
+        /// Full properties Constructor
         /// </summary>
         /// <param name="iD"></param>
         /// <param name="name"></param>
@@ -35,8 +35,6 @@ namespace LAB01_01
         /// <param name="falcuty"></param>
         public Student(string ID, string Name, float AverageScore, string Falcuty) : base(ID, Name)
         {
-            this.ID = ID;
-            this.Name = Name;
             this.AverageScore = AverageScore;
             this.Falcuty = Falcuty;
         }

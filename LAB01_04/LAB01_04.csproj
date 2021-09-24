@@ -45,5 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TownHouse.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LAB01_03\LAB01_03.csproj">
+      <Project>{a36fa5a0-7e59-4b04-8704-3d234173320a}</Project>
+      <Name>LAB01_03</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

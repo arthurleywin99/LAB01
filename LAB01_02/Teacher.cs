@@ -11,7 +11,7 @@ namespace LAB01_02
         public string Address { get; set; }
 
         /// <summary>
-        /// Empty Constructer
+        /// Empty Constructor
         /// </summary>
         public Teacher() : base()
         {
@@ -19,15 +19,13 @@ namespace LAB01_02
         }
 
         /// <summary>
-        /// Full Properties Constructer
+        /// Full Properties Constructor
         /// </summary>
         /// <param name="ID"></param>
         /// <param name="Name"></param>
         /// <param name="Address"></param>
         public Teacher(string ID, string Name, string Address) : base(ID, Name)
         {
-            this.ID = ID;
-            this.Name = Name;
             this.Address = Address;
         }
 

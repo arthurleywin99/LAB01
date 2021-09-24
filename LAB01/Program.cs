@@ -16,6 +16,7 @@ namespace LAB01
                 Console.WriteLine("* 1. BÀI TẬP 1");
                 Console.WriteLine("* 2. BÀI TẬP 2");
                 Console.WriteLine("* 3. BÀI TẬP 3");
+                Console.WriteLine("* 4. BÀI TẬP 4");
                 Console.WriteLine("* 0. THOÁT");
                 Console.WriteLine("********************************************************************************************");
 
@@ -48,6 +49,13 @@ namespace LAB01
                             Console.Clear();
                             var groundList = new GroundList();
                             groundList.Solve();
+                            break;
+                        }
+                    case 4:
+                        {
+                            Console.Clear();
+                            var realEstateList = new RealEstateList();
+                            realEstateList.Solve();
                             break;
                         }
                     default:

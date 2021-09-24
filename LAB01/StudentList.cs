@@ -13,11 +13,18 @@ namespace LAB01
         private List<Student> students;
 
         /// <summary>
+        /// Empty Constuctor
+        /// </summary>
+        public StudentList()
+        {
+            students = new List<Student>();
+        }
+
+        /// <summary>
         /// Phương thức xử lý chính
         /// </summary>
         public void Solve()
         {
-            students = new List<Student>();
             byte select;
             do
             {
@@ -109,14 +116,26 @@ namespace LAB01
         /// <param name="list"></param>
         private void InputList(List<Student> list)
         {
-            Console.Write("\t\tNhập số lượng sinh viên: ");
+            Console.Write("\t\tNhập số lượng sinh viên muốn thêm: ");
             int range = int.Parse(Console.ReadLine());
             for (var i = 0; i < range; ++i)
             {
-                Console.WriteLine("\t\tNhập sinh viên thứ {0}:", i + 1);
-                Student student = new Student();
-                student.Input();
-                list.Add(student);
+                do
+                {
+                    Console.WriteLine($"\t\tNhập sinh viên thứ {list.Count + 1}:");
+                    Student student = new Student();
+                    student.Input();
+
+                    if (list.Any(p => p.ID.Equals(student.ID)))
+                    {
+                        Console.WriteLine("\t\tĐã tồn tại sinh viên với mã này. Vui lòng nhập lại...");
+                    }
+                    else
+                    {
+                        list.Add(student);
+                        break;
+                    }
+                } while (true);
             }
         }
 
@@ -219,7 +238,7 @@ namespace LAB01
              *Điểm trung bình cao nhất nằm trong tất cả sinh viên 
              */
             var max = ((IEnumerable<dynamic>)((IEnumerable<dynamic>)list).Where(p => p is Student).ToList()).Max(p => p.AverageScore);
-            var students = ((IEnumerable<dynamic>)list).Where(p => p is Student && (p as Student).AverageScore == max).ToList();
+            var students = ((IEnumerable<dynamic>)list).Where(p => p is Student && (p as Student).AverageScore == max && (p as Student).Falcuty.Equals("CNTT")).ToList();
             
             if (students.Count == 0)
             {

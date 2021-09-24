@@ -22,7 +22,7 @@ namespace LAB01_03
         public int Area { get; set; }
 
         /// <summary>
-        /// Empty Constructer
+        /// Empty Constructor
         /// </summary>
         public Ground()
         {
@@ -30,7 +30,7 @@ namespace LAB01_03
         }
 
         /// <summary>
-        /// Full Properties Constructer
+        /// Full Properties Constructor
         /// </summary>
         /// <param name="Location"></param>
         /// <param name="Price"></param>

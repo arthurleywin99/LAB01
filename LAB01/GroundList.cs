@@ -9,7 +9,15 @@ namespace LAB01
 {
     internal class GroundList
     {
-        private List<Ground> grounds = new List<Ground>();
+        private List<Ground> grounds;
+
+        /// <summary>
+        /// Empty Constructor
+        /// </summary>
+        public GroundList()
+        {
+            grounds = new List<Ground>();
+        }
 
         /// <summary>
         /// Phương thức xử lý chính
@@ -107,11 +115,11 @@ namespace LAB01
         /// <param name="list"></param>
         private void InputList(List<Ground> list)
         {
-            Console.Write("\t\tNhập số lượng khu đất: ");
+            Console.Write("\t\tNhập số lượng khu đất muốn thêm: ");
             int range = int.Parse(Console.ReadLine());
             for (var i = 0; i < range; ++i)
             {
-                Console.WriteLine("\t\tNhập khu đất thứ {0}:", i + 1);
+                Console.WriteLine($"\t\tNhập khu đất thứ {list.Count + 1}:");
                 Ground student = new Ground();
                 student.Input();
                 list.Add(student);

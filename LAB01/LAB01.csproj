@@ -47,6 +47,7 @@
     <Compile Include="PersonList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealEstateList.cs" />
     <Compile Include="StudentList.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +65,10 @@
     <ProjectReference Include="..\LAB01_03\LAB01_03.csproj">
       <Project>{a36fa5a0-7e59-4b04-8704-3d234173320a}</Project>
       <Name>LAB01_03</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAB01_04\LAB01_04.csproj">
+      <Project>{8f5b4ef1-53e2-4c53-a0b6-7f6530f0573c}</Project>
+      <Name>LAB01_04</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

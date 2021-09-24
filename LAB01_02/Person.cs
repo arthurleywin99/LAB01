@@ -19,7 +19,7 @@ namespace LAB01_02
         public string Name { get; set; }
         
         /// <summary>
-        /// Empty Constructer
+        /// Empty Constructor
         /// </summary>
         public Person()
         {
@@ -27,7 +27,7 @@ namespace LAB01_02
         }
 
         /// <summary>
-        /// Full Properties Constructer
+        /// Full Properties Constructor
         /// </summary>
         /// <param name="ID"></param>
         /// <param name="Name"></param>
