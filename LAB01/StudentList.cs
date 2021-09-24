@@ -142,17 +142,9 @@ namespace LAB01
             {
                 if (item is Student)
                 {
-                    var student = item as Student;
-                    if (student == null)
+                    if ((item as Student).Falcuty.Equals("CNTT"))
                     {
-                        Console.Write("\t\tCasting Error");
-                    }
-                    else
-                    {
-                        if (student.Falcuty.Equals("CNTT"))
-                        {
-                            students.Add(student);
-                        }
+                        students.Add(item as Student);
                     }
                 }
             }

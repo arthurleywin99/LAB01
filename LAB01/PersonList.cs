@@ -118,6 +118,7 @@ namespace LAB01
         /// <param name="list"></param>
         private void InputList(List<Person> list)
         {
+            Person person = null;
             Console.Write("\t\tNhập số lượng: ");
             int range = int.Parse(Console.ReadLine());
             for (int i = 0; i < range; ++i)
@@ -132,16 +133,16 @@ namespace LAB01
                     byte select = byte.Parse(Console.ReadLine());
                     if (select == 1)
                     {
-                        Student student = new Student();
-                        student.Input();
-                        list.Add(student);
+                        person = new Student();
+                        person.Input();
+                        list.Add(person);
                         break;
                     }
                     else if (select == 2)
                     {
-                        Teacher teacher = new Teacher();
-                        teacher.Input();
-                        list.Add(teacher);
+                        person = new Teacher();
+                        person.Input();
+                        list.Add(person);
                         break;
                     }
                     else
