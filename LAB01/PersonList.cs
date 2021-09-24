@@ -10,8 +10,7 @@ namespace LAB01
 {
     internal class PersonList
     {
-        private StudentList studentList = new StudentList();
-        private List<Person> people; //Tạo đối tượng này dùng để tái sử dụng lại 2 method ITFalcuty && OutputList
+        private List<Person> people; 
 
         /// <summary>
         /// Phương thức xử lý chính
@@ -42,7 +41,7 @@ namespace LAB01
                         }
                     case 2:
                         {
-                            studentList.ITFalcuty(people);
+                            StudentList.ITFalcuty(people);
                             Notification();
                             break;
                         }
@@ -74,7 +73,7 @@ namespace LAB01
                         }
                     case 6:
                         {
-                            studentList.BestITStudent(people);
+                            StudentList.BestITStudent(people);
                             Notification();
                             break;
                         }
@@ -167,7 +166,7 @@ namespace LAB01
             else
             {
                 Console.WriteLine("\t{0,-10}{1,-20}{2,-15}{3,-10}", "ID", "FullName", "AverageScore", "Falcuty");
-                studentList.OutputList(students);
+                StudentList.OutputList(students);
             }
         }
 
@@ -184,7 +183,7 @@ namespace LAB01
             else
             {
                 Console.WriteLine("\t{0,-10}{1,-20}{2,-20}", "ID", "FullName", "Address");
-                studentList.OutputList(teachers);
+                StudentList.OutputList(teachers);
             }
         }
 

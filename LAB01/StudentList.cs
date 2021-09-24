@@ -124,7 +124,7 @@ namespace LAB01
         /// Xuất danh sách
         /// </summary>
         /// <param name="list"></param>
-        internal void OutputList(dynamic list)
+        internal static void OutputList(dynamic list)
         {
             foreach (var item in list)
             {
@@ -135,7 +135,7 @@ namespace LAB01
         /// <summary>
         /// Xuất ra thông tin của các SV đều thuộc khoa CNTT (nếu có)
         /// </summary>
-        internal void ITFalcuty(dynamic list)
+        internal static void ITFalcuty(dynamic list)
         {
             var students = new List<Student>();
             foreach (var item in list)
@@ -213,7 +213,7 @@ namespace LAB01
         /// Xuất ra danh sách sinh viên có điểm TB cao nhất và thuộc khoa CNTT (nếu có)
         /// </summary>
         /// <param name="list"></param>
-        internal void BestITStudent(dynamic list)
+        internal static void BestITStudent(dynamic list)
         {
             /**
              *Điểm trung bình cao nhất nằm trong tất cả sinh viên 
