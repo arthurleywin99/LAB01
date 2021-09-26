@@ -65,14 +65,7 @@ namespace LAB01
                         }
                     case 5:
                         {
-                            if (Price1m2(grounds) == 0)
-                            {
-                                Console.WriteLine("\t\tKhông có khu đất nào có diện tích trên 1000m2");
-                            }
-                            else
-                            {
-                                Console.WriteLine("\t\tGiá tiền trung bình 1m2: {0}", Price1m2(grounds));
-                            }
+                            Price1m2(grounds);
                             Notification();
                             break;
                         }
@@ -133,7 +126,8 @@ namespace LAB01
         private void OutputList(List<Ground> list)
         {
             Console.WriteLine("\t{0,-20}{1,-10}{2,-10}", "Location", "Price", "Area");
-            foreach (var item in list) {
+            foreach (var item in list)
+            {
                 item.Output();
                 Console.WriteLine();
             }
@@ -170,14 +164,21 @@ namespace LAB01
         /// Tính đơn giá trung bình 1m2 của tất cả các khu đất có diện tích > 1000m2 (nếu có)
         /// </summary>
         /// <param name="list"></param>
-        private float Price1m2(List<Ground> list)
+        private void Price1m2(List<Ground> list)
         {
             var groundList = list.Where(p => p.Area >= 1000).ToList();
             if (groundList.Count == 0)
             {
-                return 0;
+                Console.WriteLine("\t\tKhông có khu đất có diện tích lớn hơn 1000");
             }
-            return groundList.Average(q => (q.Price / q.Area));
+            else
+            {
+                Console.WriteLine("\t{0,-20}{1,-20}", "Location", "AveragePrice");
+                foreach (var item in groundList)
+                {
+                    Console.WriteLine($"\t{item.Location,-20}{item.Price / item.Area,-20}");
+                }
+            }
         }
     }
 }
